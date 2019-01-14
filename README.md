@@ -8,7 +8,7 @@ All this code is bad don't judge
 
 For AES the closes I can get is with this:
 ``` bash
-echo 'mq+cC6Ax2+8R8LAnEWgQnA==' | openssl base64 -d | openssl aes-128-cbc -d -nopad -nosalt -iv 31323334353637383930313233343536 -K 3033303132303039
+echo 'mq+cC6Ax2+8R8LAnEWgQnA==' | openssl base64 -d | openssl aes-128-cbc -d -iv 313233343536373862307a323334356e -K 3033303132303039
 ```
 
 This was a hunt for 12 words hidden in this image
