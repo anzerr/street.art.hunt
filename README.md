@@ -2,14 +2,23 @@
 ### `Intro`
 This is a dump of what I had before someone found the solution
 
+note: I worked more after on the AES to understand why https://aesencryption.net/index.php is the only place I can get a valid response. I also tried to find `"peuple"` and `"combat"` in the barcode still can't :/
+
+All this code is bad don't judge
+
+For AES the closes I can get is with this:
+``` bash
+echo 'mq+cC6Ax2+8R8LAnEWgQnA==' | openssl base64 -d | openssl aes-128-cbc -d -nopad -nosalt -iv 31323334353637383930313233343536 -K 3033303132303039
+```
+
 This was a hunt for 12 words hidden in this image
 ![alt text](https://raw.githubusercontent.com/anzerr/street.art.hunt/master/util/image.jpg)
 
-## `word locations`
-- 2 found as base64
-- 2 found as aes
-- 2 found as cesar
-- 6 found in base6 barcodes
+## `Word Locations`
+- 2 found as base64 `["conduire", "triomphe"]`
+- 2 found as aes `["horizon", "jaune"]`
+- 2 found as cesar `["union", "citoyen"]`
+- 6 found in base6 barcodes `["banquier", "usure", "mensonge", "peuple", "combat", "espoir"]`
 
 ## `Wallet`
 https://www.blockchain.com/btc/address/1NqPwPp7hEXZ3Atj77Ue11xAEMmXqAXwrQ?sort=0
